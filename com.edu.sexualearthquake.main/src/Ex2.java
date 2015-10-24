@@ -27,7 +27,7 @@ public class Ex2 {
             System.out.println("Дискримінант = " + d);
 
             if (d < 0)
-                System.out.print("Рівняння розв'язку немає!");
+                System.out.print("Рівняння розв'язку немає");
             else if (d == 0) {
                 x1 = (-b) / (2 * a);
                 System.out.println("x = " + x1);
