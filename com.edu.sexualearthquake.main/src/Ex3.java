@@ -22,7 +22,7 @@ public class Ex3 {
         }
 
 
-        System.out.println("Парні:" + sumEven);
-        System.out.println("Непарні" + sumOdd);
+        System.out.println("РџР°СЂРЅС–:" + sumEven);
+        System.out.println("РќРµРїР°СЂРЅС–" + sumOdd);
     }
 }
