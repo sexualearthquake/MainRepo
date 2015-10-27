@@ -16,8 +16,7 @@ public class Dish {
     public String toString() {
         return String.format(
                 " %9s страва\t, Цін -: %5d,\t Калорійність %d ",
-                this.price, this.name, this.calories,
-                );
+                this.price, this.name, this.calories);
     }
 
 }
