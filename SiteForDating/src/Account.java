@@ -1,6 +1,3 @@
-import java.util.HashSet;
-import java.util.Set;
-
 /**
  * Created by D on 09.12.2015.
  */
@@ -10,7 +7,6 @@ public class Account {
     private int age;
     private int location;
     private String gender;
-    private Set<String> categories = new HashSet<>();
     private String city;
     private String category;
 
@@ -22,10 +18,6 @@ public class Account {
 
     }
 
-    public Set<String> getCategories() {
-
-        return categories;
-    }
 
 
     public String getName() {
@@ -59,5 +51,6 @@ public class Account {
 
 
 }
+
 
 

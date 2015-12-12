@@ -2,40 +2,37 @@ import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
-import java.util.concurrent.SynchronousQueue;
 
 /**
  * Created by D on 09.12.2015.
  */
-public class Base {
-
-    public static void main(String[] args) throws IOException {
-        Map<String , Object> newKoliction = new HashMap<>();
-
-
-
-        Scanner sc = new Scanner(System.in);}
+public class Base { Map<String , String> readText = new HashMap<>();
+    Scanner sc = new Scanner(System.in);
 
 
 
 
-        void ReadFile () throws IOException {
-            Map<String, String> account = new HashMap<>();
-            account.put("Роберт ДеНіро, Нью-Йорк, М", "44 роки");
-            account.put("Аліна Кравченко, Ужгород, Ж", "19 років");
-            account.put("Сергій Гук, Краснодар, М", "26 років");
-            account.put("Вова Лембак, Ужгород, М", "17 років");
-            account.put("Тони Кавана, Лос-Анжелес, М", "38 років");
-            account.put("Елісон ДіЛоурентіс, Пенсільванія, Ж", "24 роки");
-            account.put("Люсі Хейл, Лос-Анжелес, Ж", "26 років");
-            account.put("Ешлі Мерін, Альбукерке, Ж", "45 років");
-            account.put("Йоши Йамамото, Токіо, М", "54 роки");
-            account.put("Каріна Лафлеур, Кіото, Ж", "19 років");
-            account.put("Віктор Прошин, Москва, М", "33 роки");
-            account.put("Шей Мітчелл, Лос-Анжелес, Ж", "25 років");
 
 
-        PrintWriter writer = new PrintWriter(new FileWriter("src/Resources/data.txt"));
+
+
+    void ReadFile () throws IOException {
+        Map<String, String> account = new HashMap<>();
+        account.put("Р РѕР±РµСЂС‚ Р”РµРќС–СЂРѕ, РќСЊСЋ-Р™РѕСЂРє, Рњ", "44 СЂРѕРєРё");
+        account.put("РђР»С–РЅР° РљСЂР°РІС‡РµРЅРєРѕ, РЈР¶РіРѕСЂРѕРґ, Р–", "19 СЂРѕРєС–РІ");
+        account.put("РЎРµСЂРіС–Р№ Р“СѓРє, РљСЂР°СЃРЅРѕРґР°СЂ, Рњ", "26 СЂРѕРєС–РІ");
+        account.put("Р’РѕРІР° Р›РµРјР±Р°Рє, РЈР¶РіРѕСЂРѕРґ, Рњ", "17 СЂРѕРєС–РІ");
+        account.put("РўРѕРЅРё РљР°РІР°РЅР°, Р›РѕСЃ-РђРЅР¶РµР»РµСЃ, Рњ", "38 СЂРѕРєС–РІ");
+        account.put("Р•Р»С–СЃРѕРЅ Р”С–Р›РѕСѓСЂРµРЅС‚С–СЃ, РџРµРЅСЃС–Р»СЊРІР°РЅС–СЏ, Р–", "24 СЂРѕРєРё");
+        account.put("Р›СЋСЃС– РҐРµР№Р», Р›РѕСЃ-РђРЅР¶РµР»РµСЃ, Р–", "26 СЂРѕРєС–РІ");
+        account.put("Р•С€Р»С– РњРµСЂС–РЅ, РђР»СЊР±СѓРєРµСЂРєРµ, Р–", "45 СЂРѕРєС–РІ");
+        account.put("Р™РѕС€Рё Р™Р°РјР°РјРѕС‚Рѕ, РўРѕРєС–Рѕ, Рњ", "54 СЂРѕРєРё");
+        account.put("РљР°СЂС–РЅР° Р›Р°С„Р»РµСѓСЂ, РљС–РѕС‚Рѕ, Р–", "19 СЂРѕРєС–РІ");
+        account.put("Р’С–РєС‚РѕСЂ РџСЂРѕС€РёРЅ, РњРѕСЃРєРІР°, Рњ", "33 СЂРѕРєРё");
+        account.put("РЁРµР№ РњС–С‚С‡РµР»Р», Р›РѕСЃ-РђРЅР¶РµР»РµСЃ, Р–", "25 СЂРѕРєС–РІ");
+
+
+        PrintWriter writer = new PrintWriter(new FileWriter("SiteForDating/src/Data/text.txt"));
         writer.println(account.size());
         for (Map.Entry<String, String> entry : account.entrySet()) {
             writer.println(entry.getKey());
@@ -49,7 +46,7 @@ public class Base {
     void read() throws FileNotFoundException {
 
         Map<String, String> savedAccount = new HashMap<>();
-        Scanner scanner = new Scanner(new File("src/Resources/data.txt"));
+        Scanner scanner = new Scanner(new File("SiteForDating/src/Data/text.txt"));
         int size = Integer.parseInt(scanner.nextLine());
         for (int i = 0; i < size; i++) {
             String name = scanner.nextLine();
@@ -57,14 +54,71 @@ public class Base {
             savedAccount.put(name, age);
 
         }
+        readText.putAll(savedAccount);
     }
+    void  readTextext() {
+        for (Map.Entry<String, String> entry : readText.entrySet())
+            System.out.println(entry.getKey() + "-" + entry.getValue());
+    }
+
+    void Account (String t, int p){
+
+        String name;
+        int location;
+        int gender;
+        int age;
+
+        name = t;
+        location = p;
+
+        String open = (name + "\n" + location);
+
+    }
+
+    public void Entrance(){
+        System.out.println("                                                               ");
+        System.out.println("            |  Welcome to the SiteForDating! :D  |                  ");
+        System.out.println("                                                               ");
+        System.out.println("                           |Menu|                              ");
+        System.out.println("                                                               ");
+        System.out.println("                      Search: <search>" + "\n" +
+                "                  Add new account<new> " + "\n" +
+                "             Delete your account <del>" + "\n" +
+                "               Change your info <edit>" + "\n" +
+                "                            Exit <off>" + "\n" +
+                " ");
+    }void Add (){
+        System.out.println("Р’РІРµРґС–С‚СЊ С–Рј'СЏ, РјС–СЃС‚Рѕ С‚Р° РїРѕР»");
+        String acc = sc.next();
+        System.out.println("РјС–СЃС‚Рѕ");
+        int location = sc.nextInt();
+
+
+
+    }void Delete() {
+        System.out.println("Р’Р°С€Сѓ Р°РЅРєРµС‚Сѓ РІРёРґР°Р»РµРЅРѕ.");
+    }
+
+    void Error() {
+        System.out.println("" + "\n" +
+                "Unfortunately, for technical reasons," + "\n" +
+                "site is not working at the moment." + "\n" +
+                "But you can always take to the streets"+ "\n" +
+                "and meet someone in real life" + "\n" +
+                "With all one's heart,site Administration.");
+    }
+
+
+
+
+
 //
-//        System.out.printf("Щоб додати новий аккаунт введіть додати (додати)");
+//        System.out.printf("Р©РѕР± РґРѕРґР°С‚Рё РЅРѕРІРёР№ Р°РєРєР°СѓРЅС‚ РІРІРµРґС–С‚СЊ РґРѕРґР°С‚Рё (РґРѕРґР°С‚Рё)");
 //        String otvet = sc.nextLine();
-//        if (otvet.equals("додати")){
-//            System.out.println("Введіть ім'я, місто, пол");
+//        if (otvet.equals("РґРѕРґР°С‚Рё")){
+//            System.out.println("Р’РІРµРґС–С‚СЊ С–Рј'СЏ, РјС–СЃС‚Рѕ, РїРѕР»");
 //            String name = sc.nextLine();
-//            System.out.println("Введіть вік");
+//            System.out.println("Р’РІРµРґС–С‚СЊ РІС–Рє");
 //            int age = sc.nextInt()  ;
 //
 //        }
@@ -77,9 +131,7 @@ public class Base {
 //        }
 //        writer.close();
 //
-//        for (Map.Entry<String, String> entry : savedAccount.entrySet())
-//            System.out.println(entry.getKey() + "-" + entry.getValue());
+
 
 
 }
-
